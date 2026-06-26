@@ -702,6 +702,117 @@ textarea.form-control {
 }
 
 /* ==========================================================================
+   SECTIONS: ABIN & URGENCY BANNER
+   ========================================================================== */
+.abin-title {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.abin-text {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #cbd5e0;
+}
+
+.abin-text-last {
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #cbd5e0;
+}
+
+.abin-graphic-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.abin-graphic-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  border: 2px dashed rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.abin-graphic-glow {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+  opacity: 0.15;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.abin-graphic-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.abin-graphic-icon {
+  width: 80px;
+  height: 80px;
+  fill: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.abin-graphic-title {
+  color: var(--color-bg-white);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.abin-graphic-subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* Urgency Banner */
+.urgency-banner {
+  background-color: #cbd5e0;
+  padding: 4rem 0;
+}
+
+.urgency-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.urgency-text {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+}
+
+.btn-whatsapp {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+  color: var(--color-bg-white);
+}
+
+.btn-whatsapp:hover {
+  background-color: #2f855a;
+  border-color: #2f855a;
+  color: var(--color-bg-white);
+}
+
+.text-accent {
+  color: var(--color-accent) !important;
+}
+
+/* ==========================================================================
    RESPONSIVE MEDIA QUERIES (MOBILE-FIRST)
    ========================================================================== */
 @media (max-width: 768px) {
