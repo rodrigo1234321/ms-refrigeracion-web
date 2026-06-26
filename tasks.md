@@ -22,12 +22,14 @@ Este archivo sirve para registrar los progresos del desarrollo, actualizar el es
 ## 3. Hito 3: Optimización y Control de Calidad
 - [x] Validar compatibilidad responsive y menú móvil-first (desde 320px hasta 1440px+) sin duplicados en el DOM <!-- id: 301 -->
 - [x] Verificar accesibilidad (WCAG AA - contraste y navegación por teclado) <!-- id: 302 -->
-- [x] Optimizar WPO (tiempos de carga rápidos, minificación, formato .webp para imágenes extraídas de la web vieja) <!-- id: 303 -->
+- [x] Optimizar WPO (tiempos de carga rápidos, minificación, formato .webp para imágenes extraídas de la web vieja, y carga defer en scripts) <!-- id: 303 -->
 - [x] Configurar redirecciones 301 (mapeo de URLs antiguas de msrefrigeracion.com.ar a las nuevas para preservar el SEO) <!-- id: 304 -->
+- [x] Refactorizar estilos inline a CSS, corregir iconos SVG de servicios y canonicals a HTTPS <!-- id: 305 -->
 
 ## 4. Hito 4: Control de Versiones y Despliegue
 - [x] Inicializar repositorio local y realizar commit inicial <!-- id: 401 -->
 - [x] Conectar repositorio local con remoto en GitHub y subir el código <!-- id: 402 -->
+
 
 ---
 
