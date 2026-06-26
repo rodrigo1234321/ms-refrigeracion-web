@@ -25,6 +25,10 @@ Este archivo sirve para registrar los progresos del desarrollo, actualizar el es
 - [x] Optimizar WPO (tiempos de carga rápidos, minificación, formato .webp para imágenes extraídas de la web vieja) <!-- id: 303 -->
 - [x] Configurar redirecciones 301 (mapeo de URLs antiguas de msrefrigeracion.com.ar a las nuevas para preservar el SEO) <!-- id: 304 -->
 
+## 4. Hito 4: Control de Versiones y Despliegue
+- [/] Inicializar repositorio local y realizar commit inicial <!-- id: 401 -->
+- [ ] Conectar repositorio local con remoto en GitHub y subir el código <!-- id: 402 -->
+
 ---
 
 ## Autoevaluación y Revisiones (Review-Driven Development)
@@ -37,3 +41,5 @@ Este archivo sirve para registrar los progresos del desarrollo, actualizar el es
 | **Botón de WhatsApp** | **Completado** | Botón flotante no intrusivo fijado en esquina inferior derecha para asistencia 365 días. |
 | **Formulario de Contacto** | **Completado** | Formulario semántico formal con envío asincrónico por AJAX a través del servicio Web3Forms. |
 | **Rendimiento (WPO) y SEO** | **Completado** | Carga veloz gracias a imágenes ligeras en formato .webp, SVG nativos para logo e iconos, y redirecciones 301 configuradas en `.htaccess`. |
+| **Control de Versiones** | **En Progreso**| Repositorio de Git local inicializado con commit inicial en rama `main`. Pendiente subir a GitHub. |
+
