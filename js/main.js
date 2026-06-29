@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initContactForm();
   initActiveLink();
+  initHeaderScroll();
+  initScrollReveal();
+  initStatsCounter();
 });
 
 /**
@@ -128,5 +131,102 @@ function initActiveLink() {
     } else {
       link.classList.remove('active');
     }
+  });
+}
+
+/**
+ * Handles Header styling on scroll (Glassmorphism effect)
+ */
+function initHeaderScroll() {
+  const header = document.querySelector('.main-header');
+  if (!header) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+}
+
+/**
+ * Initializes IntersectionObserver for Scroll Reveal animations
+ */
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll('.reveal');
+  
+  if (!revealElements.length || !window.IntersectionObserver) {
+    // Fallback if IntersectionObserver isn't supported or no elements exist
+    revealElements.forEach(el => el.classList.add('active'));
+    return;
+  }
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15 // Trigger when 15% of the element is visible
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        // Stop observing once animated to keep it visible
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  revealElements.forEach(el => {
+    revealObserver.observe(el);
+  });
+}
+
+/**
+ * Initializes dynamic counter for statistics
+ */
+function initStatsCounter() {
+  const statsElements = document.querySelectorAll('[data-target]');
+  
+  if (!statsElements.length || !window.IntersectionObserver) return;
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // Trigger when 50% is visible
+  };
+
+  const countUp = (el) => {
+    const target = +el.getAttribute('data-target');
+    const duration = 2000; // ms
+    const increment = target / (duration / 16); // 60fps
+    let current = 0;
+
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        el.innerText = Math.ceil(current);
+        requestAnimationFrame(updateCounter);
+      } else {
+        el.innerText = target;
+      }
+    };
+    updateCounter();
+  };
+
+  const statsObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        countUp(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  statsElements.forEach(el => {
+    // Initialize text to 0
+    el.innerText = '0';
+    statsObserver.observe(el);
   });
 }
