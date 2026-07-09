@@ -5,8 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto | MS Refrigeración - Asistencia y Presupuestos</title>
   <meta name="description" content="Póngase en contacto con MS Refrigeración. Formulario de consulta técnica, ubicación en Mar del Plata, teléfonos de urgencia y dirección de correo electrónico.">
-  <link rel="canonical" href="https://msrefrigeracion.com.ar/contacto-2/">
+  <link rel="canonical" href="https://msrefrigeracion.com.ar/contacto.html">
   
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://msrefrigeracion.com.ar/contacto.html">
+  <meta property="og:title" content="Contacto | MS Refrigeración - Asistencia y Presupuestos">
+  <meta property="og:description" content="Póngase en contacto con MS Refrigeración. Formulario de consulta técnica, ubicación en Mar del Plata, teléfonos de urgencia y dirección de correo electrónico.">
+  <meta property="og:image" content="https://msrefrigeracion.com.ar/assets/images/logo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://msrefrigeracion.com.ar/contacto.html">
+  <meta property="twitter:title" content="Contacto | MS Refrigeración - Asistencia y Presupuestos">
+  <meta property="twitter:description" content="Póngase en contacto con MS Refrigeración. Formulario de consulta técnica, ubicación en Mar del Plata, teléfonos de urgencia y dirección de correo electrónico.">
+  <meta property="twitter:image" content="https://msrefrigeracion.com.ar/assets/images/logo.png">
+
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
   
@@ -159,6 +173,27 @@
               </div>
 
               <div class="form-group">
+                <label for="sector">Sector / Tipo de Instalación *</label>
+                <select id="sector" name="sector" class="form-control" required style="background: white;">
+                  <option value="" disabled selected>Seleccione su sector...</option>
+                  <option value="Naval">Industria Naval (Buques Pesqueros / Factoría)</option>
+                  <option value="Frigorifico">Planta Industrial / Frigorífico de Faena o Desposte</option>
+                  <option value="Comercial">Cámara Comercial (Depósito / Distribución)</option>
+                  <option value="Otro">Otro Tipo de Servicio Técnico</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.75rem; background-color: rgba(229, 62, 62, 0.05); padding: 1rem; border-radius: 8px; border: 1px dashed rgba(229, 62, 62, 0.2); margin-top: 1.5rem; margin-bottom: 1.5rem;">
+                <input type="checkbox" id="urgencia" name="urgencia" style="width: 20px; height: 20px; margin-top: 0.2rem; cursor: pointer;">
+                <label for="urgencia" style="cursor: pointer; margin-bottom: 0; color: var(--color-primary); font-weight: 600; font-size: 0.9rem;">
+                  ¿Es una Emergencia Técnica 24 hs?
+                  <span style="display: block; font-weight: 400; font-size: 0.8rem; color: var(--color-text-muted); margin-top: 0.2rem;">
+                    Active esta casilla si requiere asistencia crítica inmediata para evitar la pérdida de mercadería o parada de producción.
+                  </span>
+                </label>
+              </div>
+
+              <div class="form-group">
                 <label for="message">Detalle de la Consulta Técnica *</label>
                 <textarea id="message" name="message" class="form-control" placeholder="Detalle los requerimientos de su buque o planta (ej. potencia de compresor, panelería, urgencia, etc.)" required></textarea>
               </div>
@@ -168,6 +203,38 @@
             
             <!-- AJAX Response Area -->
             <div id="form-response" style="display: none;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section reveal" id="faqs" style="background-color: var(--color-bg-white); border-top: 1px solid rgba(0,0,0,0.05);">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Dudas Frecuentes</span>
+          <h2 class="section-title">Preguntas Frecuentes para Clientes B2B</h2>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+          <div style="background-color: var(--color-bg-light); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+            <h4 style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem;">¿Cuentan con habilitaciones para ingresar al Puerto de Mar del Plata?</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem;">Sí. Como miembros activos de la ABIN, contamos con todos los permisos y seguros necesarios para el ingreso de nuestro personal técnico a zonas de seguridad primaria portuaria, terminales y buques pesqueros en rada o dique.</p>
+          </div>
+
+          <div style="background-color: var(--color-bg-light); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+            <h4 style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem;">¿Con qué tipos de refrigerantes industriales trabajan?</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem;">Contamos con experiencia y herramental especializado para trabajar con Amoníaco (R717) -el estándar en plantas de faena y buques congeladores-, sistemas secundarios de Glicol, y todos los gases halogenados tradicionales (R404A, R507, R134a, R22).</p>
+          </div>
+
+          <div style="background-color: var(--color-bg-light); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+            <h4 style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem;">¿Cómo funciona el servicio de guardia de urgencias 24 hs?</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem;">Nuestra guardia telefónica y técnica está operativa los 365 días del año para incidentes críticos de pérdida de frío en plantas y barcos. Al activar la alerta (ya sea vía formulario marcando la casilla de urgencia, o llamando directamente al teléfono de guardia), nuestro técnico se desplaza a la locación en un tiempo de respuesta mínimo coordinado.</p>
+          </div>
+
+          <div style="background-color: var(--color-bg-light); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+            <h4 style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem;">¿Qué cobertura geográfica tienen para montajes industriales?</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem;">Para servicios de mantenimiento urgente y reparaciones de compresores operamos principalmente en Mar del Plata y zonas de influencia. Para montajes mayores de plantas de frío y panelería, ejecutamos proyectos a nivel nacional y en puertos pesqueros de toda la Patagonia Argentina.</p>
           </div>
         </div>
       </div>
